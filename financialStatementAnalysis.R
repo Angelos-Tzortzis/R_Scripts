@@ -30,18 +30,18 @@ expenses <- c(
 
 # Analysis.
 profit <- revenue - expenses
-tax <- round(profit*0.30, digits=2)
+tax <- round(profit * 0.30, digits = 2)
 profitAfterTax <- profit - tax
-profitMargin <- round(profitAfterTax/revenue, 2)*100
+profitMargin <- round(profitAfterTax / revenue, 2) * 100
 meanPat <- mean(profitAfterTax)
 goodMonths <- profitAfterTax > meanPat
 badMonths <- !goodMonths
 bestMonth <- profitAfterTax == max(profitAfterTax)
 worstMonth <- profitAfterTax == min(profitAfterTax)
-revenue_1000 <- round(revenue/1000, 2)
-expenses_1000 <- round(expenses/1000, 2)
-profit_1000 <- round(profit/1000, 2)
-profitAfterTax_1000 <- round(profitAfterTax/1000, 2)
+revenue_1000 <- round(revenue / 1000, 2)
+expenses_1000 <- round(expenses / 1000, 2)
+profit_1000 <- round(profit / 1000, 2)
+profitAfterTax_1000 <- round(profitAfterTax / 1000, 2)
 
 m <- rbind(
   profit,
